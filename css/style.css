@@ -5,7 +5,65 @@
 }
 
 /* FUNZIONALITÀ */
+:root{ /*!SOLO PER LA STRUTTURA*/
+    --grigio-0: #23272a;
+    --grigio-1: #676767;
+}
+
 .center{
     width: 1180px;
     margin: auto;
+}
+
+/* HEADER */
+header{
+    height: 80px;
+    background-color: #ff6900;
+}
+
+.nav{
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.nav > div{
+    flex-basis: calc(100% / 3);
+}
+
+.logo{
+    text-align: center;
+}
+
+.menu-user{
+    text-align: right;
+}
+
+.logo img{
+    width: 120px;
+}
+
+main{
+    padding-top: 50px; /*!POI VERRÀ TOLTO*/
+}
+
+
+/* MAIN */
+.row{
+    display: flex;
+}
+
+.card{
+    background-color: var(--grigio-1);
+    flex-basis: 300px;
+    height: 500px;
+    margin-bottom: 50px; /*!DA TOGLIERE*/
+}
+
+
+/* FOOTER */
+footer{
+    height: 80px;
+    background-color: #1a1a1a;
+    color: white;
 }
