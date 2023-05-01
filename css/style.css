@@ -52,6 +52,24 @@ ul a:hover{ /***/
     text-decoration: underline;
 }
 
+/* TODO: CUORE ROSSO IN HOVER */
+.like:hover{
+    color: red;
+}
+
+/* TODO: CAMBIO IMMAGINE IN HOVER */
+img:last-of-type{
+    display: none;
+}
+
+.card:hover img:first-of-type{
+    display: none;
+}
+
+.card:hover img:last-of-type{
+    display: inline-block;
+}
+
 /* HEADER */
 .gender a, .menu-user a{
     padding: 8px;
@@ -109,17 +127,70 @@ input{
 /* MAIN */
 .row{
     display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    justify-content: space-between;
 }
 
 .card{
-    background-color: var(--grigio-1);
-    flex-basis: 300px;
-    height: 500px;
-    margin-bottom: 50px; /*!DA TOGLIERE*/
+    width: 350px;
 }
 
 .card img{
     width: 100%;
+}
+
+
+/* PREZZO */
+.discount{   /*prezzo scontato rosso*/
+    color: red;
+    font-weight: 900;
+}
+
+.price.discount{  /*prezzo prima dello sconto*/
+    text-decoration: line-through;
+    color: black;
+    font-weight: 400;
+}
+
+.price{  /*prezzo normale*/
+    font-weight: 900;
+}
+
+/* !Immagine del prodotto */
+.product-image{
+    position: relative;
+}
+
+.like{
+    position: absolute;
+    top: 10px;
+    right: 0;
+    padding: 5px;
+    background-color: white;
+}
+
+.info-product.flex{
+    position: absolute;
+    bottom: 30px;
+    color: white;
+}
+
+.percentage-discount{
+    background-color: red;
+    padding: 5px;
+    margin-right: 5px;
+}
+
+.characteristics{
+    background-color: green;
+    padding: 5px;
+}
+
+/* !Se non è presente nessuno sconto o caratteristica extra da segnalare assegno classe NONE in modo da rendere più veloce una eventuale modifica futura */
+.NONE{
+    padding: 0;
+    margin: 0;
 }
 
 
