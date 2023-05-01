@@ -4,10 +4,16 @@
     box-sizing: border-box;
 }
 
+body{
+    font-family: Helvetica, sans-serif;
+    padding-top: 80px;
+}
+
 /* FUNZIONALITÀ */
-:root{ /*!SOLO PER LA STRUTTURA*/
+:root{ /*!GRIGIO PER LA STRUTTURA*/
     --grigio-0: #23272a;
     --grigio-1: #676767;
+    --font-size-s: 0.8rem;
 }
 
 .center{
@@ -15,20 +21,40 @@
     margin: auto;
 }
 
-/* HEADER */
-header{
-    height: 80px;
-    background-color: #ff6900;
+a{
+    text-decoration: none;
+    color: white;
 }
 
-.nav{
-    height: 100%;
+.card *{
+    font-size: var(--font-size-s);
+}
+
+ul.flex{
+    list-style-type: none;
+    justify-content: space-between;
+}
+
+.flex{
     display: flex;
-    align-items: center;
 }
 
-.nav > div{
-    flex-basis: calc(100% / 3);
+/* EFFETTI */
+.gender a:hover{
+    background-color: black;
+}
+
+.menu-user a:hover{
+    color: black;
+}
+
+ul a:hover{ /***/
+    text-decoration: underline;
+}
+
+/* HEADER */
+.gender a, .menu-user a{
+    padding: 8px;
 }
 
 .logo{
@@ -43,10 +69,42 @@ header{
     width: 120px;
 }
 
-main{
-    padding-top: 50px; /*!POI VERRÀ TOLTO*/
+.header-top-nav{
+    height: 80px;
+    background-color: #ff6900;
+    box-shadow: 0 1px 10px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1 ;
 }
 
+.content-top-nav.flex{
+    align-items: center;
+    height: 100%;
+}
+
+.content-top-nav > div{
+    flex-basis: calc(100% / 3);
+}
+
+.header-bottom-nav.flex{
+    background-color: black;
+    opacity: 0.7;
+    margin-bottom: 20px;
+}
+
+.search-bar{
+    background-color: white;
+    border: 1px solid black;
+    padding: 10px;
+    margin: 5px;
+}
+
+input{
+    border: none;
+}
 
 /* MAIN */
 .row{
@@ -58,6 +116,10 @@ main{
     flex-basis: 300px;
     height: 500px;
     margin-bottom: 50px; /*!DA TOGLIERE*/
+}
+
+.card img{
+    width: 100%;
 }
 
 
